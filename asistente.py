@@ -75,7 +75,18 @@ def preguntar_a_la_ia(clave, historial):
     raise ultimo_error
 
 st.set_page_config(page_title="Francheska · Asistente Personal", page_icon="🦋")
-
+# Forzar colores consistentes
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #0e1117;
+        color: #ffffff;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 with st.sidebar:
     st.header("⚙️ Ajustes")
     clave = st.text_input("Clave de API de Google Gemini", type="password")
