@@ -78,8 +78,10 @@ st.set_page_config(page_title="Francheska Â· Asistente Personal", page_icon="ðŸ¦
 st.markdown(
     """
     <style>
-    /* Forzar color de texto rosado claro en las respuestas del chat */
-    .stChatMessage p, .stChatMessage div {
+    /* Forzar color rosado claro en los mensajes del asistente y del usuario */
+    div[data-testid="stChatMessage"] p, 
+    div[data-testid="stChatMessage"] span,
+    div[data-testid="stChatMessage"] div {
         color: #ffb6c1 !important;
     }
     </style>
